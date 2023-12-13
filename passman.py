@@ -21,10 +21,10 @@ credential = sys.argv[2].split('@')
 
 PLATFORMS = {'google': {
     'ardihariprasetiyooo': 'rLwJxOcYkzSW9/0tciae693WFQePUoMcgvtECNrhsdc='}}
-SERCRET_KEY = '4mefIs6EkILQCACfojqfru2QczGxPlc4oOytQoPivG0='
+VALID_SECRET_DIGEST = 'FFDw3BDd0cjQggMw2mDjsyJyBpOoyYzSsG1/QVrG5bo='
 master_key_digest = base64.b64encode(hmac.new(bytes(
-    master_key, encoding='utf-8'), b'masterkey', sha256).digest()).decode('utf-8')
-if master_key_digest != SERCRET_KEY:
+    master_key, encoding='utf-8'), bytes(master_key, encoding='utf-8'), sha256).digest()).decode('utf-8')
+if master_key_digest != VALID_SECRET_DIGEST:
     print('Invalid master key')
     exit()
 
