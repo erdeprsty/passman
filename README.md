@@ -1,2 +1,2 @@
 # passman
-weird password manager
+Weird PBKDF2-based password manager
