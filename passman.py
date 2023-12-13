@@ -20,7 +20,7 @@ master_key = sys.argv[1]
 credential = sys.argv[2].split('@')
 
 PLATFORMS = {'google': {
-    'ardihariprasetiyooo': 'rLwJxOcYkzSW9/0tciae693WFQePUoMcgvtECNrhsdc='}}
+    'ardihariprasetiyooo': 'rLwJxOcYkzSW9/0tciae693WFQePUoMcgvtECNrhsdc='}, 'pastebin': 'lOrWvL5F/vo9b2GYeCRmqT4keQorIES3YkBto8/S8Cg='}
 VALID_SECRET_DIGEST = 'FFDw3BDd0cjQggMw2mDjsyJyBpOoyYzSsG1/QVrG5bo='
 master_key_digest = base64.b64encode(hmac.new(bytes(
     master_key, encoding='utf-8'), bytes(master_key, encoding='utf-8'), sha256).digest()).decode('utf-8')
